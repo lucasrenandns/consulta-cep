@@ -5,19 +5,19 @@ consultar.addEventListener('click', consultaCEP)
 
 function consultaCEP() {
 
-    const campoCep = Number(document.querySelector("#campo-cep").value) //buscando campo input
+    const campoCep = Number(document.querySelector("#campo-cep").value) //Buscando campo input
 
-    const ajax = new XMLHttpRequest() //acessando informações de forma remota
+    const ajax = new XMLHttpRequest() //Acessando informações de forma remota
 
     ajax.open('GET', 'https://viacep.com.br/ws/'+campoCep+'/json/') //Buscando informações do site VIA CEP e do campo input
 
-    ajax.send() //enviando solicitação
+    ajax.send() //Enviando solicitação
 
     ajax.onload = function () { // Carregando informações
 
         const saida = document.querySelector("#saida")
 
-        let retorno = this.responseText
+        let retorno = this.responseText //Recebendo solicitação
 
         let texto = JSON.parse(retorno)
 
