@@ -17,7 +17,7 @@ function consultaCEP() {
 
         const saida = document.querySelector("#saida")
 
-        let retorno = this.responseText //Recebendo solicitação(resposta)
+        let retorno = this.responseText //Recebendo resposta
 
         let texto = JSON.parse(retorno)
 
