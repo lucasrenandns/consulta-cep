@@ -5,7 +5,7 @@ consultar.addEventListener('click', consultaCEP)
 
 function consultaCEP() {
 
-    const campoCep = Number(document.querySelector("#campo-cep").value) //Buscando campo input
+    const campoCep = Number(document.querySelector("#campo-cep").value) //Buscando campo input e o seu valor
 
     const ajax = new XMLHttpRequest() //Acessando informações de forma remota
 
@@ -17,7 +17,7 @@ function consultaCEP() {
 
         const saida = document.querySelector("#saida")
 
-        let retorno = this.responseText //Recebendo solicitação
+        let retorno = this.responseText //Recebendo solicitação(resposta)
 
         let texto = JSON.parse(retorno)
 
